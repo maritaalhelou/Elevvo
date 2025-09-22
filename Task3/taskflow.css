@@ -1,0 +1,473 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{ 
+    background: linear-gradient(to right,cadetblue); 
+    color: whitesmoke;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    font-family: sans-serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+ }
+
+ section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 100px 20px;
+  padding-top: 140px;
+  min-height: 100vh;
+  background: whitesmoke;
+}
+
+
+.navbar{
+    background: cadetblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight: 600 bold;
+    color: whitesmoke;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    transition: .3s;
+}
+
+li a:hover{
+    color: #333;
+}
+
+.home{
+    background: linear-gradient(to right,whitesmoke,cadetblue);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+}
+#home {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px; 
+}
+
+.intro{
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-style: italic;
+    min-height: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.message{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.btn{
+    margin-top: 30px;
+}
+
+.btn a{
+    background: whitesmoke;
+    color: cadetblue;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid cadetblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.btn a:hover{
+    background: cadetblue;
+    color: whitesmoke;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.features{
+    padding: 80px 20px;
+    background: whitesmoke;
+    color: #333;
+    text-align: center;
+}
+
+.features-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: cadetblue;
+    animation: typing 3s steps(80,end);
+}
+
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.features-box{
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.features-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.features-box h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: cadetblue;
+}
+
+.features-box p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.reviews {
+    padding: 80px 20px;
+    background: cadetblue;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.reviews-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.review-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.review-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.pricing {
+    padding: 80px 20px;
+    background: whitesmoke;
+    color: #333;
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: cadetblue;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-box {
+    background: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.pricing-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pricing-box h3 {
+    font-size: 1.8rem;
+    color: cadetblue;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    color: #333;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.pricing-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.pricing-box ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.pricing-btn {
+    background: cadetblue;
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing-btn:hover {
+    background: #333;
+}
+
+.popular {
+    border: 2px solid cadetblue;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .pricing-box {
+        padding: 20px 15px;
+    }
+
+    .pricing-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-title {
+        font-size: 2rem;
+    }
+
+    .pricing-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .pricing-btn {
+        width: 100%; 
+        padding: 14px;
+    }
+}
+
+.footer {
+    background: cadetblue;
+    color: whitesmoke;
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+.footer-social h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+

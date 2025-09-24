@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="personalBlog.css"> 
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <header>
+     <h1>My Personal Blog</h1>    
+   </header>
+
+   <div class="controls">
+    <div class="filter">
+        <button onclick="filterPosts('all')">All</button>
+        <button onclick="filterPosts('tech')">Tech</button>
+        <button onclick="filterPosts('travel')">Travel</button>
+        <button onclick="filterPosts('food')">Food</button>
+    </div>
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search posts by title..." oninput="searchPosts()" aria-label="Search posts">
+        <button type="submit" class="search-btn" onclick="searchPosts()" aria-label="Search"><i class='bxr  bx-search-alt' ></i> </button>
+   </div>
+
+   
+<section class="blog-container" id="blog-container">
+  <div id="blog-cards" class="blog-cards">
+  </div>
+</section>
+
+
+   <div class="pagination" id="pagination"></div>
+
+     <script src="personalBlog.js"></script>
+</body>
+</html>

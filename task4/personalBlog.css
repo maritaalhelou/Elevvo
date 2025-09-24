@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Quicksand);
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: var(--Roboto,sans-serif);
+    background-size: cover;
+    color: #333;
+    line-height: 1.4;
+    color: var(--dark);
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(jess-bailey-q10VITrVYUM-unsplash.jpg) center/cover no-repeat fixed;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+header{
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background: rgba(0,0,0,0.6); 
+    color: #fff; 
+    padding: 0 20px; 
+    border-radius: 12px; 
+    height: 120px;
+ }
+
+h1{
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: var(--Playfair);
+    letter-spacing: 1px;
+}
+
+.controls{
+    text-align: center;
+    margin: 20px;
+   
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter button {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  background: var(--exDark);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+  background: var(--dark);
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 0;
+}
+
+#searchInput{
+    font-family: var(--Roboto);
+    font-size: 1.0.5rem;
+    width: 320px;
+    outline: none;
+    padding: 0.68rem 1rem;
+    border: 1px solid var(--dark);
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+    background: #fff;
+    color: var(--dark);
+    box-sizing: border-box;
+}
+
+#searchInput::placeholder{
+    color: #aaa;
+    text-transform: capitalize;
+}
+
+
+.search-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.85rem;       
+  border: 1px solid var(--dark);
+  border-left: none;             
+  border-radius: 0 6px 6px 0;    
+  background: var(--exDark);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.12s;
+}
+
+.search-btn i{
+    font-size: 1.15rem;
+    pointer-events: none;
+}
+
+.search-btn:hover{
+    background: var(--dark);
+}
+
+.search-btn:active{
+    transform: translateY(1px);
+}
+
+.blog-container {
+  padding: 40px 20px;
+}
+
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+.blog-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.blog-category {
+  display: inline-block;
+  font-size: 0.85rem;
+  background: #eee;
+  color: #555;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.pagination button {
+  background: #eee;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pagination button:hover {
+  background: #ddd;
+}
+
+.pagination button.active {
+  background: #333;
+  color: #fff;
+}
